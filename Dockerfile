@@ -68,3 +68,9 @@ SocksPort 0.0.0.0:9050 IsolateDestAddr
 TransPort 0.0.0.0:9040 
 User tor 
 VirtualAddrNetworkIPv4 10.192.0.0/10 
+
+
+
+
+/usr/sbin/privoxy --user privoxy /etc/privoxy/config 
+exec /usr/bin/tor
