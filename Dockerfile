@@ -28,11 +28,11 @@ buffer-limit 4096
 enable-proxy-authentication-forwarding 0 
 trusted-cgi-referer http://www.example.org/ 
 forward-socks5t / 127.0.0.1:9050 . 
-forward 172.17.*.*/ . 
-forward 10.10.*.*/ . 
-forward 192.168.*.*/ . 
-forward 127.*.*.*/ . 
-forward localhost/ . 
+forward 172.17.*.* / . 
+forward 10.10.*.* / . 
+forward 192.168.*.* / . 
+forward 127.*.*.* / . 
+forward localhost / 
 forwarded-connect-retries  0
 accept-intercepted-requests 1
 allow-cgi-request-crunching 0
