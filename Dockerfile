@@ -18,7 +18,7 @@ actionsfile default.action   # Main actions file
 actionsfile user.action      # User customizations 
 filterfile default.filter 
 filterfile user.filter      # User customizations 
-listen-address  :8118 
+listen-address 127.0.0.1:8118 
 toggle  1 
 enable-remote-toggle  0 
 enable-remote-http-toggle  0
@@ -27,12 +27,10 @@ enforce-blocks 0
 buffer-limit 4096 
 enable-proxy-authentication-forwarding 0 
 trusted-cgi-referer http://www.example.org/ 
-forward-socks5t / 127.0.0.1:9050 . 
-forward 172.17.*.* / . 
-forward 10.10.*.* / . 
-forward 192.168.*.* / . 
-forward 127.*.*.* / . 
-forward localhost / 
+forward-socks5t . / 127.0.0.1:9050  
+forward-socks4 .  / 127.0.0.1:9050 
+forward-socks4a . / 127.0.0.1:9050 
+forward-socks5 .  / 127.0.0.1:9050 
 forwarded-connect-retries  0
 accept-intercepted-requests 1
 allow-cgi-request-crunching 0
